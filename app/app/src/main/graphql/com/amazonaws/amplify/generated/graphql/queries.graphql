@@ -1,0 +1,202 @@
+# this is an auto generated file. This will be overwritten
+query GetJourney($id: ID!) {
+  getJourney(id: $id) {
+    id
+    code
+    from
+    to
+    schedule {
+      items {
+        id
+        day
+        time
+      }
+      nextToken
+    }
+    stops {
+      items {
+        id
+        name
+        latitude
+        longitude
+        address
+      }
+      nextToken
+    }
+  }
+}
+query ListJourneys(
+  $filter: ModelJourneyFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listJourneys(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      code
+      from
+      to
+      schedule {
+        items {
+          id
+          day
+          time
+        }
+        nextToken
+      }
+      stops {
+        items {
+          id
+          name
+          latitude
+          longitude
+          address
+        }
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetSchedule($id: ID!) {
+  getSchedule(id: $id) {
+    id
+    day
+    time
+    journey {
+      id
+      code
+      from
+      to
+    }
+  }
+}
+query ListSchedules(
+  $filter: ModelScheduleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listSchedules(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      day
+      time
+      journey {
+        id
+        code
+        from
+        to
+      }
+    }
+    nextToken
+  }
+}
+query GetTrip($id: ID!) {
+  getTrip(id: $id) {
+    id
+    date
+    scheduleId
+    passengers {
+      items {
+        id
+        name
+        seat
+        stopId
+      }
+      nextToken
+    }
+  }
+}
+query ListTrips(
+  $filter: ModelTripFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listTrips(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      date
+      scheduleId
+      passengers {
+        items {
+          id
+          name
+          seat
+          stopId
+        }
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetPassenger($id: ID!) {
+  getPassenger(id: $id) {
+    id
+    trip {
+      id
+      date
+      scheduleId
+    }
+    name
+    seat
+    stopId
+  }
+}
+query ListPassengers(
+  $filter: ModelPassengerFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPassengers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      trip {
+        id
+        date
+        scheduleId
+      }
+      name
+      seat
+      stopId
+    }
+    nextToken
+  }
+}
+query GetStop($id: ID!) {
+  getStop(id: $id) {
+    id
+    journey {
+      id
+      code
+      from
+      to
+    }
+    name
+    latitude
+    longitude
+    address
+  }
+}
+query ListStops(
+  $filter: ModelStopFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listStops(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      journey {
+        id
+        code
+        from
+        to
+      }
+      name
+      latitude
+      longitude
+      address
+    }
+    nextToken
+  }
+}

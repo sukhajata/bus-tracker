@@ -1,0 +1,226 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateJourney {
+  onCreateJourney {
+    id
+    from
+    to
+    trips {
+      items {
+        id
+        date
+      }
+      nextToken
+    }
+    stops {
+      items {
+        id
+        name
+        latitude
+        longitude
+        address
+      }
+      nextToken
+    }
+  }
+}
+subscription OnUpdateJourney {
+  onUpdateJourney {
+    id
+    from
+    to
+    trips {
+      items {
+        id
+        date
+      }
+      nextToken
+    }
+    stops {
+      items {
+        id
+        name
+        latitude
+        longitude
+        address
+      }
+      nextToken
+    }
+  }
+}
+subscription OnDeleteJourney {
+  onDeleteJourney {
+    id
+    from
+    to
+    trips {
+      items {
+        id
+        date
+      }
+      nextToken
+    }
+    stops {
+      items {
+        id
+        name
+        latitude
+        longitude
+        address
+      }
+      nextToken
+    }
+  }
+}
+subscription OnCreateTrip {
+  onCreateTrip {
+    id
+    journey {
+      id
+      from
+      to
+    }
+    date
+    passengers {
+      items {
+        id
+        name
+        seat
+      }
+      nextToken
+    }
+  }
+}
+subscription OnUpdateTrip {
+  onUpdateTrip {
+    id
+    journey {
+      id
+      from
+      to
+    }
+    date
+    passengers {
+      items {
+        id
+        name
+        seat
+      }
+      nextToken
+    }
+  }
+}
+subscription OnDeleteTrip {
+  onDeleteTrip {
+    id
+    journey {
+      id
+      from
+      to
+    }
+    date
+    passengers {
+      items {
+        id
+        name
+        seat
+      }
+      nextToken
+    }
+  }
+}
+subscription OnCreatePassenger {
+  onCreatePassenger {
+    id
+    trip {
+      id
+      date
+    }
+    name
+    seat
+    stop {
+      id
+      name
+      latitude
+      longitude
+      address
+    }
+  }
+}
+subscription OnUpdatePassenger {
+  onUpdatePassenger {
+    id
+    trip {
+      id
+      date
+    }
+    name
+    seat
+    stop {
+      id
+      name
+      latitude
+      longitude
+      address
+    }
+  }
+}
+subscription OnDeletePassenger {
+  onDeletePassenger {
+    id
+    trip {
+      id
+      date
+    }
+    name
+    seat
+    stop {
+      id
+      name
+      latitude
+      longitude
+      address
+    }
+  }
+}
+subscription OnCreateStop {
+  onCreateStop {
+    id
+    journey {
+      id
+      from
+      to
+    }
+    name
+    latitude
+    longitude
+    address
+  }
+}
+subscription OnUpdateStop {
+  onUpdateStop {
+    id
+    journey {
+      id
+      from
+      to
+    }
+    name
+    latitude
+    longitude
+    address
+  }
+}
+subscription OnDeleteStop {
+  onDeleteStop {
+    id
+    journey {
+      id
+      from
+      to
+    }
+    name
+    latitude
+    longitude
+    address
+  }
+}

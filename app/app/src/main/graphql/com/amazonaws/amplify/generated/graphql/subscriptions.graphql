@@ -1,0 +1,250 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateJourney {
+  onCreateJourney {
+    id
+    code
+    from
+    to
+    schedule {
+      items {
+        id
+        day
+        time
+      }
+      nextToken
+    }
+    stops {
+      items {
+        id
+        name
+        latitude
+        longitude
+        address
+      }
+      nextToken
+    }
+  }
+}
+subscription OnUpdateJourney {
+  onUpdateJourney {
+    id
+    code
+    from
+    to
+    schedule {
+      items {
+        id
+        day
+        time
+      }
+      nextToken
+    }
+    stops {
+      items {
+        id
+        name
+        latitude
+        longitude
+        address
+      }
+      nextToken
+    }
+  }
+}
+subscription OnDeleteJourney {
+  onDeleteJourney {
+    id
+    code
+    from
+    to
+    schedule {
+      items {
+        id
+        day
+        time
+      }
+      nextToken
+    }
+    stops {
+      items {
+        id
+        name
+        latitude
+        longitude
+        address
+      }
+      nextToken
+    }
+  }
+}
+subscription OnCreateSchedule {
+  onCreateSchedule {
+    id
+    day
+    time
+    journey {
+      id
+      code
+      from
+      to
+    }
+  }
+}
+subscription OnUpdateSchedule {
+  onUpdateSchedule {
+    id
+    day
+    time
+    journey {
+      id
+      code
+      from
+      to
+    }
+  }
+}
+subscription OnDeleteSchedule {
+  onDeleteSchedule {
+    id
+    day
+    time
+    journey {
+      id
+      code
+      from
+      to
+    }
+  }
+}
+subscription OnCreateTrip {
+  onCreateTrip {
+    id
+    date
+    scheduleId
+    passengers {
+      items {
+        id
+        name
+        seat
+        stopId
+      }
+      nextToken
+    }
+  }
+}
+subscription OnUpdateTrip {
+  onUpdateTrip {
+    id
+    date
+    scheduleId
+    passengers {
+      items {
+        id
+        name
+        seat
+        stopId
+      }
+      nextToken
+    }
+  }
+}
+subscription OnDeleteTrip {
+  onDeleteTrip {
+    id
+    date
+    scheduleId
+    passengers {
+      items {
+        id
+        name
+        seat
+        stopId
+      }
+      nextToken
+    }
+  }
+}
+subscription OnCreatePassenger {
+  onCreatePassenger {
+    id
+    trip {
+      id
+      date
+      scheduleId
+    }
+    name
+    seat
+    stopId
+  }
+}
+subscription OnUpdatePassenger {
+  onUpdatePassenger {
+    id
+    trip {
+      id
+      date
+      scheduleId
+    }
+    name
+    seat
+    stopId
+  }
+}
+subscription OnDeletePassenger {
+  onDeletePassenger {
+    id
+    trip {
+      id
+      date
+      scheduleId
+    }
+    name
+    seat
+    stopId
+  }
+}
+subscription OnCreateStop {
+  onCreateStop {
+    id
+    journey {
+      id
+      code
+      from
+      to
+    }
+    name
+    latitude
+    longitude
+    address
+  }
+}
+subscription OnUpdateStop {
+  onUpdateStop {
+    id
+    journey {
+      id
+      code
+      from
+      to
+    }
+    name
+    latitude
+    longitude
+    address
+  }
+}
+subscription OnDeleteStop {
+  onDeleteStop {
+    id
+    journey {
+      id
+      code
+      from
+      to
+    }
+    name
+    latitude
+    longitude
+    address
+  }
+}
